@@ -1,0 +1,54 @@
+site_name: aprod
+repo_url: https://github.com/ldorigo/aprod
+site_url: https://ldorigo.github.io/aprod
+site_description: convert any date range to a perfectly round number of somethings
+site_author: Luca Dorigo
+edit_uri: edit/main/docs/
+repo_name: ldorigo/aprod
+copyright: Maintained by <a href="https://ldorigo.com">Florian</a>.
+
+nav:
+  - Home: index.md
+  - Modules: modules.md
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+            setup_commands:
+                - import sys
+                - sys.path.append('../')
+theme:
+  name: material
+  feature:
+    tabs: true
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ldorigo/aprod
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/aprod
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
